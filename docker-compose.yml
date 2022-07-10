@@ -14,8 +14,6 @@ services:
 
   mongo-db:
     image: mongo
-    volumes:
-      - mongo-db:/data/db
     depends_on:
       - redis
 
