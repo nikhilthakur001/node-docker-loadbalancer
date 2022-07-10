@@ -1,0 +1,16 @@
+version: "3"
+services:
+  nginx:
+    ports:
+      - "3300:80"
+
+  node-server:
+    build:
+      context: ./
+      args:
+        NODE_ENV: dev
+    volumes:
+      - ./:/server
+    env_file:
+      - ./.env
+    command: npm run dev

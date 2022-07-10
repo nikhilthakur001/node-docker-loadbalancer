@@ -1,0 +1,14 @@
+version: "3"
+services:
+  nginx:
+    ports:
+      - "3301:80"
+
+  node-server:
+    build:
+      context: ./
+      args:
+        NODE_ENV: prod
+    env_file:
+      - ./.prod.env
+    command: node index.js
