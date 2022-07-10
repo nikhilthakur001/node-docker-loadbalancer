@@ -2,7 +2,7 @@ version: "3"
 services:
   nginx:
     ports:
-      - "3301:80"
+      - "80:80"
 
   node-server:
     build:
